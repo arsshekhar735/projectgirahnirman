@@ -1,5 +1,7 @@
 // Load environment variables from .env file
 require('dotenv').config();
+const User = require('./models/User');
+
 
 const express = require("express");
 const cors = require("cors");
@@ -9,11 +11,18 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 
+
+
 const app = express();
 const PORT = 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
+
+const userRoutes = require("./userRoutes"); // adjust path if needed
+
+app.use("/api", userRoutes);
+
 
 const JWT_SECRET = process.env.JWT_SECRET;
 

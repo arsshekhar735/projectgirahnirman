@@ -111,9 +111,17 @@ const submitContactForm = async () => {
           <div className="mt-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-lg">
             <nav className="flex items-center justify-between px-6 py-4">
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 shadow"></div>
+                <div className="h-10 w-10 rounded-xl shadow overflow-hidden">
+                  <img 
+                    src="/src/assets/logo.png" 
+                    alt="Logo" 
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+
                 <span className="text-xl md:text-2xl font-extrabold tracking-wide">
-                  GIRAH NIRMAN
+                  NirmanX
                 </span>
               </div>
               <div className="hidden md:flex items-center gap-6 text-sm">
@@ -143,10 +151,10 @@ const submitContactForm = async () => {
 
               </div>
               <div className="flex items-center gap-3">
-                <button className="px-4 py-2 rounded-xl border border-slate-300 hover:border-amber-500 hover:text-amber-600 transition">
+                <button className="px-4 py-2 rounded-xl border border-slate-300 hover:border-amber-500 hover:text-amber-600 transition" onClick={() => navigate("/login")}>
                   Login
                 </button>
-                <button className="px-4 py-2 rounded-xl bg-amber-500 text-black font-semibold hover:bg-amber-400 transition shadow">
+                <button className="px-4 py-2 rounded-xl bg-amber-500 text-black font-semibold hover:bg-amber-400 transition shadow" onClick={() => navigate("/register")}>
                   Register
                 </button>
               </div>
@@ -159,7 +167,7 @@ const submitContactForm = async () => {
       <section className="relative h-[92vh] w-full overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="https://videos.pexels.com/video-files/854521/854521-hd_1920_1080_30fps.mp4"
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
           autoPlay
           muted
           loop
